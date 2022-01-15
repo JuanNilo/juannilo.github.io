@@ -68,22 +68,34 @@ body{
         display: block;
         cursor: pointer;
     }
+    
     .nav__menu{
         position: fixed;
-        top:80px;
+        top:150px;
         bottom: 0;
         background: #f08080;
         width: 100%;
         left:0;
+        font-size: 5rem;
         display: flex;
         justify-content: space-evenly;
         flex-direction: column;
         align-items: center;
         clip-path: circle(0 at center);
         transition: clip-path 1s ease-in-out;
+        z-index: 1;
     }
     .nav__input:checked + .nav__menu{
+        
         clip-path: circle(100% at center);
     }
+    .form{
+        transform: scale(2);
+    }
+    .nav{
+        height: 150px;
+    }
+    .nav__logo, .nav__label{
+        transform: scale(2);
+    }
 }
-
