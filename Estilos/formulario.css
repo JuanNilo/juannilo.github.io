@@ -168,11 +168,7 @@ body{
     transform: scale(1);
 }
 
-@media (max-width: 480px){
-    .form__title{
-        font-size: 1.5rem;
-    }
-}
+
 
 @media (max-width: 1081px){
     .nav__label{
