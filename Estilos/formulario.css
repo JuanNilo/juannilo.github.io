@@ -13,13 +13,15 @@ body{
 
 .body__form{
     font-family: 'Roboto', sans-serif;
-    background-color: rgb(2, 116, 81);
-    display: flex;height: 100vh;
+    /* background-color: rgb(2, 116, 81); */
+    background: lightsalmon;
+    display: flex;
+    height: 100vh;
 }
 
 
 .nav{
-    background-color: #293241;
+    background-color: #3d3333;
     height: 80px;
     color:white;
 }
@@ -47,6 +49,7 @@ body{
 
 .nav__item{
     color:white;
+    font-weight: bold;
     text-decoration: none;
     --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
     transition: clip-path .3s;
@@ -77,8 +80,9 @@ body{
 
 .form{
     background: #fff;
-    margin: auto;
+    margin: 75px auto;
     width: 90%;
+    height: 600px;
     max-width: 400px;
     padding: 4.5em 3em;
     border-radius: 10px;
@@ -126,7 +130,8 @@ body{
 .form__input:focus + .form__label, .form__input:not(:placeholder-shown)+ .form__label{
     transform: translateY(-12px) scale(.95);
     transform-origin: left top;
-    color:  rgb(2, 116, 81);
+    /* color:  rgb(2, 116, 81); */
+    background: lightsalmon;
     
 }
 
@@ -141,7 +146,8 @@ body{
 }
 
 .form__submit{
-    background:  rgb(2, 116, 81);
+    /* background:  rgb(2, 116, 81); */
+    background: lightsalmon;
     color: white;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
@@ -157,10 +163,14 @@ body{
     left: 0;
     width: 100%;
     height: 1.5px;
-    background-color: rgb(2, 116, 81);
+    /* background-color: rgb(2, 116, 81); */
+    background-color: lightsalmon;
     transform: scale(0);
     transform: left bottom;
     transition: transform .4s;
+}
+.form__submit:hover{
+    cursor: pointer;
 }
 
 
@@ -180,7 +190,7 @@ body{
         position: fixed;
         top:150px;
         bottom: 0;
-        background: #f08080;
+        background: rgb(248, 201, 182);
         width: 100%;
         left:0;
         font-size: 5rem;
@@ -198,11 +208,15 @@ body{
     }
     .form{
         transform: scale(2);
+        margin: 450px auto;
     }
     .nav{
         height: 150px;
     }
     .nav__logo, .nav__label{
         transform: scale(2);
+    }
+    .nav__item{
+        color:black;
     }
 }

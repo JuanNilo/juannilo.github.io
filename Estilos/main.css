@@ -7,11 +7,11 @@
 }
 body{
     font-family: 'Roboto', sans-serif;
-    background: rgb(184, 183, 183)
+    background: lightsalmon;
 }
 
 .nav{
-    background-color: #293241;
+    background-color: #3d3333;
     height: 80px;
     color:white;
 }
@@ -40,6 +40,8 @@ body{
 .nav__item{
     color:white;
     text-decoration: none;
+    
+    font-weight: bold;
     --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
     transition: clip-path .3s;
 }
@@ -63,6 +65,32 @@ body{
     display: none;
 }
 
+.cajon{
+    height: 90px;
+    background-color:lightsalmon;
+    padding:10px;
+}
+.text{
+    display: flex;
+    margin:10px auto;
+    font-family: monospace;
+    font-size: 2rem;
+    white-space: nowrap;
+    border-right: 4px  solid;
+    width: 8ch;
+    /* font-size: xx-large; */
+    animation: typing  2s steps(8), blink .5s infinite step-end alternate ;
+    overflow: hidden;
+}
+
+@keyframes typing{
+    from{ width: 0;}
+}
+
+@keyframes blink {
+    50%{ border-color: transparent;}
+}
+
 @media (max-width: 1081px){
     .nav__label{
         display: block;
@@ -73,7 +101,7 @@ body{
         position: fixed;
         top:150px;
         bottom: 0;
-        background: #f08080;
+        background: rgb(248, 201, 182);
         width: 100%;
         left:0;
         font-size: 5rem;
@@ -97,5 +125,15 @@ body{
     }
     .nav__logo, .nav__label{
         transform: scale(2);
+    }
+    .text{
+        font-size: 8rem;
+    }
+    .cajon{
+        height: 200px;
+    }
+    
+    .nav__item{
+        color:black;
     }
 }
