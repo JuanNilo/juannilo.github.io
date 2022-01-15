@@ -63,7 +63,7 @@ body{
     display: none;
 }
 
-@media (max-width: 700px){
+@media (max-width: 1081px){
     .nav__label{
         display: block;
         cursor: pointer;
