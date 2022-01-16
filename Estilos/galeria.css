@@ -1,19 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
 
 *{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body{
+	background:rgb(43, 42, 42) ;
 	font-family: 'Poppins', sans-serif;
 }
+
 .main{
     font-family: 'Roboto', sans-serif;
     background: lightsalmon;
 }
+/* NAV BAR */
+
 
 .nav{
     background-color: #3d3333;
@@ -24,7 +28,7 @@ body{
 .nav__logo{
     font-size: 1.5em;
     font-weight: 900;
-    font-family: 'Poppins', sans-serif;
+	font-family: 'Poppins', sans-serif;
 }
 .nav__container{
     display: flex;
@@ -70,66 +74,113 @@ body{
     display: none;
 }
 
-/* 
 
-    TEXTO 
 
-*/
-.cajon{
-    height: 90px;
-    background-color:lightsalmon;
-    padding:10px;
+
+/* Galeria */
+.title{
+	text-align: center;
+	font-size: 3rem;
+	color:white;
+	padding: .8em 0 .4em;
 }
-.text{
-    display: flex;
-    margin:10px auto;
-    font-family: 'Roboto', sans-serif;
-    font-size: 2rem;
-    white-space: nowrap;
-    border-right: 4px  solid;
-    width: 8ch;
-    animation: typing  2s steps(8), blink .5s infinite step-end alternate ;
-    overflow: hidden;
-}
-
-@keyframes typing{
-    from{ width: 0;}
+.gallery{
+	padding-bottom: 3em;
+	padding-top: 1em;
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	grid-auto-rows: 160px;
+	grid-template-areas: 
+	"img1 img3 img2 img2"
+	"img1 img3 img2 img2"
+	"img4 img4 img6 img5"
+	"img4 img4 img6 img5";
+	gap: .8em;
 }
 
-@keyframes blink {
-    50%{ border-color: transparent;}
+.gallery__picture{
+	position: relative;
+	cursor: pointer;
+	border: solid 2px rgba(0, 0, 0, 0.144);
+	border-radius: 30px;
+	overflow: hidden;
 }
 
-/* Botones */
-
-
-.gallery__btn{
-    margin: 60px auto;
-    justify-content: center;
-    width: 180px;
-    height: 100px;
-    background:lightsalmon;
-    border-radius: 30px;
-    align-items: center;
+.gallery__picture::before{
+	content: "Descripcion";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(248, 173, 143, 0.712);
+	transform: translate(101%);
+	transition: transform .5s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5rem;
 }
 
-.btn{
-    color: black;
-    padding: 30px 40px;
-    text-align: center;
-    font-size: 2rem;
-    text-decoration: none;
-    display: flex;
-    font-weight: bold;
-    font-family: 'Roboto', sans-serif;
+.gallery__picture:hover::before{
+	transform: translate(0);
+	font-weight: bold;
+}
+.g1{
+	grid-area: img1;
+	content: "imagen 1";
 }
 
+.g2{
+	grid-area: img2;
+}
+
+.g3{
+	grid-area: img3;
+}
+
+.g4{
+	grid-area: img4;
+}
+
+.g5{
+	grid-area: img5;
+}
+
+.g6{
+	grid-area: img6;
+}
+
+.gallery__img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
 
 /* Responsive Menu */
-
-
-
 @media (max-width: 1081px){
+	.title{
+		font-size: 5rem;
+		padding: .8rem 0 .4rem;
+	}
+	.gallery{
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: 
+		"img1 img1"
+		"img1 img1"
+		"img2 img4"
+		"img2 img4"
+		"img5 img6"
+		"img5 img6"
+		"img3 img3"
+		"img3 img3" 
+		;
+	}
+	.gallery__picture:hover::before{
+		font-size: 3rem;
+		font-weight: bold;
+	}
+
     .nav__label{
         display: block;
         cursor: pointer;

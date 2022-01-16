@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@300;400;700&display=swap');
+
 
 *{
     margin:0;
@@ -6,7 +8,7 @@
     box-sizing: border-box;
 }
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background: rgb(184, 183, 183);
     
 }
@@ -29,6 +31,7 @@ body{
 .nav__logo{
     font-size: 1.5em;
     font-weight: 900;
+    font-family: 'Poppins', sans-serif;
 }
 .nav__container{
     display: flex;
@@ -73,10 +76,6 @@ body{
 .nav__label, .nav__input{
     display: none;
 }
-
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-
 
 .form{
     background: #fff;
