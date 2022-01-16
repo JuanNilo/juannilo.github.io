@@ -148,7 +148,7 @@ body{
         flex-direction: column;
         align-items: center;
         clip-path: circle(0 at center);
-        transition: clip-path 1s ease-in-out;
+        transition: clip-path 0.65s ease-in-out;
         z-index: 1;
     }
     .nav__input:checked + .nav__menu{
