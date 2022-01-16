@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 
 *{
@@ -7,10 +7,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
-    font-family: 'Poppins', sans-serif;
-    background: rgb(184, 183, 183);
-    
+	background:lightsalmon;
+	font-family: 'Poppins', sans-serif;
 }
 
 .body__form{
@@ -19,6 +19,7 @@ body{
     background: lightsalmon;
     display: flex;
     height: 100vh;
+    margin-bottom: 20vh;
 }
 
 
@@ -130,7 +131,7 @@ body{
     transform: translateY(-12px) scale(.95);
     transform-origin: left top;
     /* color:  rgb(2, 116, 81); */
-    background: lightsalmon;
+    color: lightsalmon;
     
 }
 
