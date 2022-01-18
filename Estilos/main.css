@@ -12,7 +12,7 @@ body{
 }
 .main{
     font-family: 'Roboto', sans-serif;
-    background: lightsalmon;
+    background: #f5576c;
 }
 
 .nav{
@@ -357,7 +357,7 @@ footer{
         position: fixed;
         top:150px;
         bottom: 0;
-        background: rgb(248, 201, 182);
+        background: #f5576c;
         width: 100%;
         left:0;
         font-size: 5rem;
@@ -391,5 +391,55 @@ footer{
     
     .nav__item{
         color:black;
+    }
+
+    .hero a{ 
+        font-size: 30px;
+    }
+    .titulo.left {
+        font-size: 3rem;
+        text-align: center;
+    }
+    .contenedor-textos-main p{
+        display: none;
+    }
+    .contenedor-textos-main a{
+        font-size: 2rem;
+    }
+    .website a{
+        margin-left: 70px;
+    }
+    .info p{
+        font-size: 13px;
+        text-align: justify;
+    }
+    .info .titulo.left{
+        font-size: rem;
+        margin-top: 20px;
+    }
+
+    .content-cards p{
+        display: none;
+    }
+
+    .content-cards a{
+        font-size: 30px;
+        margin-top: 30px;
+        border-radius: 2rem;
+    }
+    .content-cards h3{
+        font-size: 2.5em;
+    }
+
+    .card{
+        box-shadow: 0 0 5px 0 rgba(0,0,0,.7);
+    }
+
+    .info-last .titulo.left{
+        font-size: 54px;
+        font-weight: bold;
+    }
+    .info-last a{
+        margin-left: 100px;
     }
 }

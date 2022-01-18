@@ -160,8 +160,9 @@ body{
 /* Responsive Menu */
 @media (max-width: 1081px){
 	.title{
+
 		font-size: 5rem;
-		padding: .8rem 0 .4rem;
+		padding: 1rem 0 .4rem;
 	}
 	.gallery{
 		grid-template-columns: 1fr 1fr;
@@ -190,7 +191,7 @@ body{
         position: fixed;
         top:150px;
         bottom: 0;
-        background: rgb(248, 201, 182);
+        background: #f5576c;
         width: 100%;
         left:0;
         font-size: 5rem;
