@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0; 
+}
+
+/* Nav bar */
+
+.nav{
+    background-color: #f5576c;
+    height: 80px;
+    color:white;
+}
+
+.nav__logo{
+    font-size: 1.5em;
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+}
+.nav__container{
+    display: flex;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.nav__menu{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 3em;
+}
+
+.nav__item{
+    color:white;
+    font-weight: bold;
+    text-decoration: none;
+    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    transition: clip-path .3s;
+}
+
+.nav__item::after{
+    content: "";
+    display: block;
+    background: white;
+    width: 90%;
+    margin-top: 3px;
+    height: 3px;
+    clip-path: var(--clippy);
+    transition: clip-path .5s;
+}
+
+.nav__item:hover{
+    --clippy: polygon(0 0, 100% 0, 100% 99%, 0 100%);
+}
+
+.nav__label, .nav__input{
+    display: none;
+}
+
+/* Juego */
+
+
+.container{
+    padding: 0px;
+    margin: auto;
+    width: 250px;
+    height: 250px;
+    background-color:  rgb(248, 233, 235);
+    border: 7px dashed #f5576c;
+}
+
+#player{
+    background-color: #f5576c;
+    border: 4px dashed #f5576c;
+    width: 20px;
+    height: 20px;
+    border-radius: 29px;
+    position: absolute;
+    transition: all 0.3s;
+}
+
+
+.pointer{
+    margin-top: 20px;
+    background-color: #eeb1b9;
+    height: 55px;
+    border-bottom: 0px;
+    text-align: center;
+    padding: 15px 0px;
+    display: grid;
+    grid-auto-rows: repeat(2, 1fr);
+}
+
+
+#puntos{
+    color: black;
+    font-size: 22px;
+    font-weight: bold;  
+    font-family: 'Poppins', sans-serif;
+}
+#tiempo{
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.texto{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+
+    margin-top: 6px;
+    
+}
+
+
+.buttons {
+    display: inline-flex;
+}
+
+.contenedor{
+    width: 220px;
+    height: 80px;
+    border: 1px solid #fff;
+    margin: 2px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.reset{
+    margin-top: 10px;
+    transform: scale(3);
+    cursor: pointer;
+}
+
+
+.paused{
+    height: 10px;
+    border-width: 5px 0 5px 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin-left: 15px;
+    border-color: transparent transparent transparent rgb(0, 0, 0);
+    transition: 100ms all ease;
+    will-change: border-width;
+    border-style: solid;
+    transform: scale(3);
+    margin-right: 60px;
+}
+
+.running{
+    border-style: double;
+    height: 18px;
+    border-width: 0 0 0 12px;
+    transform: scale(2);
+    margin-right: 60px;
+}
+
+/* Responsive */
+
+@media (max-width: 1081px){
+    .nav__label{
+        display: block;
+        cursor: pointer;
+    }
+    
+    .nav__menu{
+        position: fixed;
+        top:150px;
+        bottom: 0;
+        background: #f5576c;
+        width: 100%;
+        left:0;
+        font-size: 5rem;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        clip-path: circle(0 at center);
+        transition: clip-path 0.65s ease-in-out;
+        z-index: 1;
+    }
+    .nav__input:checked + .nav__menu{
+        
+        clip-path: circle(100% at center);
+    }
+    .nav{
+        height: 150px;
+    }
+    .nav__logo, .nav__label{
+        transform: scale(2);
+    }
+    .nav__item{
+        color:black;
+    }
+}

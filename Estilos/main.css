@@ -266,6 +266,20 @@ body{
     font-size: 50px;
 }
 
+#crono{
+    padding: 30px 0px;
+    transform: scale(2);
+}
+
+#juego{
+    padding: 30px 0px;
+    transform: scale(3);
+}
+
+#crono{
+    padding: 30px 0px;
+    transform: scale(3);
+}
 .card h3{
     font-size: 25px;
     padding-bottom: 10px;
@@ -392,7 +406,9 @@ footer{
     .nav__item{
         color:black;
     }
-
+    #img-ocult{
+        display: none;
+    }
     .hero a{ 
         font-size: 30px;
     }

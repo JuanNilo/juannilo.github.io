@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronometro</title>
+    <link rel="stylesheet" href="Estilos/styleCrono.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="javaScript/cronoScript.js" defer></script>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav__container">
+            <h1 class="nav__logo">WEB</h1>
+            <label for="menu" class="nav__label">
+                <img src="src/menu.svg" class="nav__img">
+            </label>
+            <input type="checkbox" id="menu" class="nav__input">
+            <div class="nav__menu">
+                <a href="index.html" class="nav__item">Home</a>
+                <a href="#" class="nav__item">About</a>
+                <a href="formulario.html" class="nav__item">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="circle">
+            <div id="stopWatch" class="stopWatch">00:00</div>
+            <div class="buttons">
+                <div class="stop" onclick="stop()"></div>
+                <div class="paused" id="play-pause" onclick="playPause()"></div>
+            </div>
+        </div>
+        <div class="seconds-sphere" id="seconds-sphere"></div>
+    </main>
+</body>
+</html>
