@@ -34,73 +34,80 @@ nav li:hover{
     background-color: rgba(247, 137, 153, 0.986);
 }
 
-
-/* Primera seccion */
-
-.main{
-    margin: auto;
-    width: 100vh;
-    height: 75vh;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items:center;
-    background-color: #fff;
-}
-
-.main img{
-    margin: auto;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-}
-
-h1{
-    text-align: center;
-    font-size: 2rem;
-    margin-top: 60px;   
-}
-
-span{
-    color: pink;
-}
-
-
-.info-content {
-   display: inline-block;
-   text-align: center;
-}
-.info-content a {
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
-    background-color: #73c09f;
-    padding: 10px 25px;
-    border-radius: 10px;
-    position: relative;
-}
-
-.info-content a:hover{
-    background-color: rgba(247, 137, 153, 0.986);
-}
-
-.info-content p{
-    margin-bottom: 50px;
-}
-
-.wave{
-    width: 100vh;
-    margin: auto;
-}
-
-.seccion-2{
-    background-color: #73c09f;
-    width: 100vh;
-    margin: auto;
-    height: 100vh;
-}
-
-.calendario{
+main{
+    margin: 0 auto;
+    width: 100%;
     display: flex;
-    padding-top: 100px;
     justify-content: center;
 }
+
+/* contenido */
+
+.info-content {
+    height: 100vh;
+    text-align: center;
+    width: 600px;
+    padding: 70px 20px 50px;
+    align-items: center;
+    background-color: #fff;
+ }
+
+span{
+    color: rgb(250, 166, 180);
+}
+
+
+.info-content p{
+    margin: 0 auto;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    width: 60%;
+}
+.imagen{
+    width: 450px;
+    height: 300px;
+ }
+
+ 
+
+ .sencond-section{
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+ }
+
+ .second-content{
+     background-color: #73c09f;
+ }
+
+ @media(max-width: 768px){
+     .info-content{
+        width: 100vh;
+        padding: 60px 0px;
+        height: 100vh;
+     }
+     .info-content h1{
+         margin-top: 40px;
+     }
+     .info-content p{
+        font-size: 1.3rem;
+        width: 70%;
+     }
+     .info-content img{
+         max-width: 400px;
+     }
+     nav a{
+         width: 80px;
+         text-align: center;
+         font-size: 1.2rem;
+         padding: 30px 10px;
+     }
+
+     ul{
+         padding: 0;
+     }
+     main{
+         margin: none;
+     }
+ }
