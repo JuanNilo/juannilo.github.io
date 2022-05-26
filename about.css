@@ -3,7 +3,9 @@
 body{
     box-sizing: border-box;
     margin: 0;
-    background-color: #fbeef3;
+    background-image: url('/src/4526242.jpg');
+    background-repeat: no-repeat repeat;
+    background-size: auto;
     font-family: 'Poppins', sans-serif;
 }
 
